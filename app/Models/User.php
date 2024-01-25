@@ -10,9 +10,8 @@ use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class User extends Authenticatable implements HasMedia
+class User extends Authenticatable
 {
-    use InteractsWithMedia;
     use HasApiTokens, HasFactory, Notifiable;
 
     /**

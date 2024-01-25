@@ -27,6 +27,8 @@ Route::get('/login', [LoginController::class, 'Login']);
 Route::post('/logout/{id}', [LogoutController::class, 'Logout']);
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::post('/image/{id}', [ImageController::class, 'image']);
+    Route::post('/create_image', [ImageController::class, 'create_image']);
+    Route::patch('/update_image/{image}/{id}', [ImageController::class, 'update_image']);
+    Route::delete('/delete_image/{id}', [ImageController::class, 'destroy']);
 
 });
